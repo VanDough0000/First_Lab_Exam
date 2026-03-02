@@ -2,32 +2,23 @@
 
 class Student {
 
-    private $id;
+    private $student_id;
     private $gmail;
     private $name;
     private $course;
 
-    public function __construct($id, $gmail, $name, $course) {
-        $this->id = $id;
+    public function __construct($student_id, $gmail, $name, $course) {
+        $this->student_id = $student_id;
         $this->gmail = $gmail;
         $this->name = $name;
         $this->course = $course;
     }
 
-    public function getID() {
-        return $this->id;
-    }
+    public function save($conn) {
 
-    public function getGmail() {
-        return $this->gmail;
-    }
-
-    public function getName() {
-        return $this->name;
-    }
-
-    public function getCourse() {
-        return $this->course;
+        $stmt = $conn->prepare("INSERT INTO students (student_id, gmail, name, course) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $this->student_id, $this->gmail, $this->name, $this->course);
+        return $stmt->execute();
     }
 }
 
