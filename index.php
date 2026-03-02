@@ -2,11 +2,7 @@
 <html>
 <head>
     <title>Student Record</title>
-
-    <!-- Bootstrap -->
-    <link href="https://c
-dn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 
@@ -18,7 +14,7 @@ dn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 
             <div class="mb-3">
                 <label class="form-label">Student ID</label>
-                <input type="text" name="id" class="form-control" required>
+                <input type="text" name="student_id" class="form-control" required>
             </div>
 
             <div class="mb-3">
@@ -37,7 +33,7 @@ dn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Save Student</button>
             </div>
 
         </form>
